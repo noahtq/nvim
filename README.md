@@ -9,7 +9,9 @@ Mac: `brew install neovim` Ubuntu: `apt-get install neovim`
 4.  Rename to `nvim`
 
 ### Install Lazyvim
-Clone this repo into ~/.config/
+1. Clone this repo into ~/.config/
+2. `nvim` to setup lazyvim for first time
+3. On Mac `brew install ripgrep` on Ubuntu `apt-get install ripgrep`. This installs a required package ripgrep that is used by Lazyvim to perform searches, it is basically a more efficient version of grep command. 
 
 ### To setup C++ Editing
 1. Open nvim
