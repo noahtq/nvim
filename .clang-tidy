@@ -1,0 +1,22 @@
+# Enable all default Google checks
+Checks: >
+  -*,
+  google-*,
+  bugprone-*,
+  performance-*,
+  modernize-*,
+  readability-*,
+  -modernize-use-trailing-return-type,
+  -readability-braces-around-statements
+
+# Treat all enabled warnings as errors to enforce compliance
+# WarningsAsErrors: "*"
+
+# Style-specific configurations
+CheckOptions:
+  - key:             readability-identifier-naming.VariableCase
+    value:           lower_case
+  - key:             readability-identifier-naming.FunctionCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ClassCase
+    value:           CamelCase

@@ -1,3 +1,45 @@
-BasedOnStyle: LLVM
-ColumnLimit: 100
+---
+Language: Cpp
+BasedOnStyle: Google
+IncludeBlocks: Regroup
+SortIncludes: CaseSensitive
+IncludeCategories:
+  # STL no-extension headers
+  - Regex: '^<[a-z_]+>$'
+    Priority: 1
+
+    # C stdlib .h headers
+  - Regex: '^<[[:alnum:]_]+\.h>$'
+    Priority: 2
+
+    # 3rd parter .h headers with <>
+  - Regex: '^<[[:alnum:]_/.-]+\.h>$'
+    Priority: 3
+
+    # 3rd parter .hpp headers with <>
+  - Regex: '^<[[:alnum:]_/.-]+\.hpp>$'
+    Priority: 4
+
+    # Project local "" headers
+  - Regex: '^".*"$'
+    Priority: 5
+
+    # Everything else
+  - Regex: '.*'
+    Priority: 6
+AlignConsecutiveDeclarations: true
+AlignConsecutiveAssignments: true
+AlignTrailingComments: true
+AlwaysBreakTemplateDeclarations: Yes
+TabWidth: 2
 IndentWidth: 2
+ContinuationIndentWidth: 2
+ColumnLimit: 85
+AllowAllArgumentsOnNextLine: false
+AllowShortFunctionsOnASingleLine: All
+PackConstructorInitializers: CurrentLine
+BreakConstructorInitializers: BeforeColon
+BinPackArguments : false
+BinPackParameters : false
+PointerAlignment: Left
+ReflowComments: true
